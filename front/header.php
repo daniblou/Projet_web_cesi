@@ -8,8 +8,7 @@
     <title>Document</title>
 </head>
 <body>
+    <p>header</p>
     
-C'est ici que vous devez faire la barre de navigation
-<script src="asset/vendors/js/bootstrap.min.js"></script>
-</body>
-</html>  
+
+ 
