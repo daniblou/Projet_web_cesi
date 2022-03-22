@@ -7,13 +7,17 @@
    }
 */
    $router = new AltoRouter();
-   $router->map('GET', '/connexion', function(){
-        require 'connexion.php';
-   });
+   $router->map('GET', '/connexion', 'connexion', 'login');
+   $router->map('GET', '/', 'home');
    $match = $router->match();
    if($match != null){
        require '../front/header.php';   
-       $match['target']();
+       if(is_callable($match['target'])){
+           call_user_func_array( $match['target'], $match['params']);
+       }else{
+          // $params = $match['params'];
+           require "{$match['target']}.php";
+       }
        require '../front/footer.php';   
    }
 ?>
