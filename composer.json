@@ -1,12 +1,10 @@
 {
     "require-dev": {
-<<<<<<< HEAD
+
         "symfony/var-dumper": "^5.4"
     },
     "require": {
         "altorouter/altorouter": "^2.0"
-=======
-        "symfony/var-dumper": "^6.0"
->>>>>>> 2ac62222643ad74341eaee800ae9b09876d9289f
-    }
+
+}
 }
