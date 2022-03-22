@@ -8,6 +8,7 @@
 </head>
 <body>
 <section class="vh-100">
+<div class="container py-5 h-100">
   <div class="container-fluid">
     <div class="row">
       <div class="col-sm-6 text-black">
@@ -46,6 +47,7 @@
 </div>
 <div class="col-sm-6 px-0 d-none d-sm-block">
   <img src="image/cesi.jpg" alt="Login image" class="w-100 vh-100" style="object-fit: cover; object-position: left;">
+</div>
 </div>
 </div>
 </div>
