@@ -1,25 +1,19 @@
 <?php 
-require '../vendor/autoload.php';
-$uri = $_SERVER['REQUEST_URI'];
-$router = new AltoRouter();
-$router->map('GET','/','home');
-$router->map('GET','/nous-contacter',function(){
-    echo 'contact';
-});
-$router->map('GET','/article/[*:slug]-[i:id]',function($slug , $id){
-    echo 'bon voyage';
-});
-$match = $router->match();
-
-
-if ($match != null){
-    if(is_callable($match['target'])){
-        call_user_func_array($match['target'], $match['params']); 
-        
-
-    }
-
-}
+    require '../vendor/autoload.php';
+   /* var_dump($_SERVER);
+    $uri = $_SERVER['REQUEST_URI'];
+   if($uri === '/connexion'){
+       require 'connexion.php';
+   }
+*/
+   $router = new AltoRouter();
+   $router->map('GET', '/connexion', function(){
+        require 'connexion.php';
+   });
+   $match = $router->match();
+   if($match != null){
+       require '../front/header.php';   
+       $match['target']();
+       require '../front/footer.php';   
+   }
 ?>
-
-dfgdfg
