@@ -10,6 +10,7 @@
 
 <!-- Vertical -->
 <div class="form-group">
+<div class="container py-5 h-100">
    <label for="myEmail">Email</label>
    <input type="email" id = "myEmail" class="form-control" placeholder="Email"><br><br>
    <label for="myPassword">Password</label>
@@ -18,7 +19,7 @@
 </div>
 
 </form>
-
+</div>
     
 </body>
 </html>
