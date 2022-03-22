@@ -12,6 +12,7 @@ $router->map('GET','/article/[*:slug]-[i:id]',function($slug , $id){
 $match = $router->match();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 $page = $_GET['page'] ?? '404';
 require '../front/header.php';
     if($page === 'connexion'){
@@ -21,10 +22,14 @@ require '../front/header.php';
     }
     require '../front/footer.php';
 =======
+=======
+
+>>>>>>> cd4327272adf94d34994bdb91e8db6f200b61e43
 if ($match != null){
     if(is_callable($match['target'])){
         call_user_func_array($match['target'], $match['params']); 
         
+
     }
   
 }
