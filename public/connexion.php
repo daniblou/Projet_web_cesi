@@ -1,3 +1,13 @@
+<?php 
+session_start();
+include '../Database/database.php'; // On inclus le fichier de connexion 
+$pdo = Database::connect(); //on se connecte à la base
+$_SESSION['connexion'];
+  if (isset($_POST['login']) && isset($_POST['password'])){
+    
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,12 +36,12 @@
 
             <div class="form-outline mb-4">
               <input type="email" id="form2Example18" class="form-control form-control-lg" />
-              <label class="form-label" for="form2Example18">Email address</label>
+              <label class="form-label" name="login" for="form2Example18">Email address</label>
             </div>
 
             <div class="form-outline mb-4">
               <input type="password" id="form2Example28" class="form-control form-control-lg" />
-              <label class="form-label" for="form2Example28">Password</label>
+              <label class="form-label" name="password" for="form2Example28">Password</label>
             </div>
 
             <div class="pt-1 mb-4">
