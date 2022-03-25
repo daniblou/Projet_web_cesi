@@ -21,13 +21,12 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-link text-body" aria-current="page" href="#">Commencer une recherche</a>
+      <div class="navbar-nav ms-auto md-flex">
+        <a class="nav-link text-body " aria-current="page" href="#">Commencer une recherche</a>
         <a class="nav-link text-body" href="#">Nous contacter</a>
         <a class="nav-link text-body" href="#">A propos<a>
-        <a class="nav-link text-body" href="#">Disabled</a>
         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-  <button class="btn btn-primary" type="button">Mon compte</button>
+  <button class="btn btn-primary" type="button">Connexion</button>
  
         </div>
       </div>
