@@ -8,13 +8,12 @@
     <link rel= "stylesheet" href="asset/vendors/css/connexion.css">
     <title>Document</title>
 </head>
-<<<<<<< HEAD
 <body>
    
     
-=======
+
 <body> 
->>>>>>> 039c2da5428f7ef01a6b7b0e5e07d5f13585c346
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Navbar</a>

@@ -29,12 +29,6 @@
 </section>
 
 
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> 039c2da5428f7ef01a6b7b0e5e07d5f13585c346
 <script src="asset/vendors/js/bootstrap.min.js"></script>
 </body>
 </html> 
