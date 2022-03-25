@@ -4,8 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-
-    "content-hash": "7ae77d76240aa16abe4cbb7ce6e7f11c",
+    "content-hash": "28d3405ea572fac45ebb4f17a200d5e6",
     "packages": [
         {
             "name": "altorouter/altorouter",
@@ -68,7 +67,6 @@
             "time": "2020-03-09T08:34:59+00:00"
         }
     ],
-
     "packages-dev": [
         {
             "name": "symfony/polyfill-mbstring",
