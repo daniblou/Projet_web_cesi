@@ -1,0 +1,32 @@
+
+
+body{
+    font: icon;
+    text-align: center;
+    align-items: center;
+    background-image: url("F.webp");
+    background-color: #cccccc; /* Used if the image is unavailable */
+    height: 500px; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+
+}
+
+h1
+{
+  color: blue;
+  text-align: center;
+ 
+}
+.mx-auto{
+  display: block;
+  margin: auto;
+  position: relative;
+  left: 9cm;
+
+}
+
+.btn{
+   text-align: center;
+}
