@@ -6,13 +6,15 @@
     <div class="container p-4 pb-0">
       <!-- Section: CTA -->
       <section class="">
-        <p class="d-flex justify-content-center align-items-center">
-          <i class="fa-brands fa-facebook" href= https://www.facebook.com/ ></i>
-          <i class="fa-brands fa-instagram" href= https://www.instagram.com></i>
-          <i class="fa-brands fa-youtube" href= https://www.youtube.com/ ></i>
-          <i class="fa-brands fa-linkedin" href= https://fr.linkedin.com/ ></i>
+        <p class="d-flex justify-content-center ">
+         <a  href= https://www.facebook.com/> <i class="fa-brands fa-facebook fa-2xl" ></i></a>
+         <a  href= https://www.instagram.com> <i class="fa-brands fa-instagram fa-2xl"></i><a>
+         <a  href= https://www.youtube.com/ > <i class="fa-brands fa-youtube fa-2xl"></i><a>
+         <a  href= https://fr.linkedin.com/ > <i class="fa-brands fa-linkedin fa-2xl"></i><a>
         </p>
+
       </section>
+
       <!-- Section: CTA -->
     </div>
     <!-- Grid container -->

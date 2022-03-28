@@ -32,3 +32,21 @@
  
   
   }
+
+ .header{
+   height: 450px;
+   width: 100%;
+   background: black;
+   position: relative;
+ }
+
+ .header_texture{
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   top: 0;left: 0;
+   background: url('../img/page2.png') center no-repeat;
+   background-size: cover;
+
+
+ }
