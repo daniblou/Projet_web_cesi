@@ -30,3 +30,8 @@ h1
 .btn{
    text-align: center;
 }
+@media only screen and (max-width: 600px) {
+    body {
+      background-color: lightblue;
+    }
+  }
