@@ -7,11 +7,10 @@
       <!-- Section: CTA -->
       <section class="">
         <p class="d-flex justify-content-center align-items-center">
-          <span class="me-3">Register for free</span>
-          <span class="me-3">Register for free</span>
-          <span class="me-3">Register for free</span>
-          <span class="me-3">Register for free</span>
-          
+          <i class="fa-brands fa-facebook" href= https://www.facebook.com/ ></i>
+          <i class="fa-brands fa-instagram" href= https://www.instagram.com></i>
+          <i class="fa-brands fa-youtube" href= https://www.youtube.com/ ></i>
+          <i class="fa-brands fa-linkedin" href= https://fr.linkedin.com/ ></i>
         </p>
       </section>
       <!-- Section: CTA -->
