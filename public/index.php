@@ -10,8 +10,9 @@
     // Classe altorouter pour gérer les url 
    $router = new AltoRouter();
    $router->map('GET', '/connexion', 'connexion', 'login');
-   $router->map('GET', '/create', '../crud/create');
+   $router->map('GET', '/create', '../crud/create.view');
    $router->map('GET', '/', 'home');
+   $router->map('POST', '/valid', '../controllers/createControllers', 'createControllers');
    $match = $router->match();
    if($match != null){
        require '../front/header.php';   
