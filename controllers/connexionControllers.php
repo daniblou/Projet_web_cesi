@@ -16,7 +16,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       ON utlisateur.id_users = type_utilisateur.id_type_utilisateur
        WHERE email_user=:user_login AND password_user=:user_pwd');
       $query->execute([
-          'user_login' =>( $login),
+          'user_login' =>test_input( $login),
           'user_pwd' => test_input($passaword)
       ]);
       $confirm = $query->fetch();

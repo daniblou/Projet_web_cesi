@@ -6,10 +6,10 @@
 
 if($_SERVER["REQUEST_METHOD"] == "POST")
 {
-     /* echo '<pre>';
+    echo '<pre>';
     print_r($_POST);
-    echo '<pre>';  */
-  
+    echo '</pre>';
+    
     $nom = test_input($_POST['nom']);
     $prenom = test_input($_POST['prenom']);
     $email = test_input($_POST['email']);
@@ -18,7 +18,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     $role = test_input($_POST['roles']);
     $phone = test_input($_POST['phone']);
     $promotion = test_input($_POST['promotion']);
-
+   
+/*
     
     $pdo = Database::connect(); //on se connecte à la base
     $sql = 'INSERT INTO `utlisateur`( `nom_user`, `prenom_user`, `centre_user`, `email_user`, `telephone_user`, `password_user`)
@@ -32,16 +33,28 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
         'phone' => $phone ,
         'mdp' => $mdp , 
     ]);
-    $sql2 = 'INSERT INTO `type_utilisateur`(`role_user`) VALUES (:roles)';
-    $stmt2 = $pdo->prepare($sql2);
-    $stmt2->execute(['roles'=> $role]);
+    $lastId = $pdo->lastInsertId();
+    if(!empty($role)){
+       
+        $req = $pdo->prepare('INSERT INTO `etre`( `id_users`,`id_type_user`) VALUES (:lastId, :roles)');
+        $req->execute([
+            'lastId' => $lastId,
+            'roles' => $role 
+        ]);
+     
+    }else{
 
-    $sql3 = 'INSERT INTO `promotion`(`nom_promotion`) VALUES (:promotion)';
-    $stmt3 = $pdo->prepare($sql3);
-    $stmt3->execute(['promotion' => $promotion]);
-    $pdo = Database::disconnect();
-    echo " l'utilisateur  $nom  a été enregistré avec succes " ;
-   
+    }
+    if(!empty($promotion)){
+        $req = $pdo->prepare('INSERT INTO `appartenir_`( `id_promotion`,`id_users`) VALUES (:promotion, :lastId)');
+        $req->execute([
+            'promotion' => $promotion,
+            'lastId' => $lastId 
+        ]);
+    }
+
+    echo '<div class="alert alert-success"> <h3> Le compte a été creer avec succes </h3> </div>';
+  */
 }
 
 

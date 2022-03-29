@@ -1,4 +1,8 @@
-
+<?php
+    require '../Database/database.php';
+    require '../public/functions.php';
+    $pdo = Database::connect();
+?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -23,19 +27,19 @@
 
 
             <div class="col-md-4 mb-3">
-                <label for="nom">Nom</label>
+                <label for="nom" class="form-label">Nom</label>
                 <input type="text" class="form-control" id="nom" name="nom" placeholder="Entrez votre nom" required>
                 <div class="valid-feedback">Ok !</div>
                 <div class="invalid-feedback">Valeur incorrecte</div>
             </div>
             <div class="col-md-4 mb-3">
-                <label for="prenom">Prenom</label>
+                <label for="prenom" class="form-label">Prenom</label>
                 <input type="text" class="form-control" id="prenom" name="prenom" placeholder="Entrez votre prenom" required>
                 <div class="valid-feedback">Ok !</div>
                 <div class="invalid-feedback">Valeur incorrecte</div>
             </div>
             <div class="col-md-4 mb-3">
-                <label for="Email">Email</label>
+                <label for="Email" class="form-label">Email</label>
                 <input type="email" class="form-control" id="Email" name="email" placeholder="ex : roma@gmailcom" required>
                 <div class="valid-feedback">Ok !</div>
                 <div class="invalid-feedback">Valeur incorrecte</div>
@@ -50,38 +54,57 @@
              </select>
             </div>
           <div class="col-md-4 mb-3">
-            <label for="phone">Telephone</label>
+            <label for="phone" class="form-label">Telephone</label>
             <input type="phone" class="form-control" id="phone" placeholder="Tel" name= "phone"   pattern="^((\+\d{1,3}(-| )?\(?\d\)?(-| )?\d{1,5})|(\(?\d{2,6}\)?))(-| )?(\d{3,4})(-| )?(\d{4})(( x| ext)\d{1,5}){0,1}$" required>
             <div class="valid-feedback">Ok !</div>
             <div class="invalid-feedback">Valeur incorrecte</div>
         
         </div>
         <div class="col-md-4 mb-3">
-          <label for="mdp">Mot de passe</label>
+          <label for="mdp" class="form-label">Mot de passe</label>
           <input type="password" class="form-control" name="mdp" id="mdp" placeholder="" required>
           <div class="valid-feedback">Ok !</div>
           <div class="invalid-feedback">Valeur incorrecte</div>
       </div><br>
         <div  class="col-md-4 mb-3">
+        <span class="form-label">Promotion</span>
           <select class="form-select " name="promotion" aria-label="Default select example">
-            <option selected>Sélectionner une promotion</option>
-            <option value="info">A2 Info</option>
-            <option value="generaliste">A2 Généraliste</option>
-            <option value="btp">A2 BTP</option>
+            <?php 
+                   $promotion = test_input($_POST['promotion']);
+                   $sql = $pdo->prepare( 'SELECT * FROM promotion ');
+                   $sql->execute();
+                   foreach($sql as $item){
+                   echo "<option value='".$item['nom_promotion']."'>".$item['nom_promotion']."</option>";
+                   }     
+            ?>
           </select>
          </div>
-         <!--  <div class="form-check">
-                  <input class="form-check-input" type="checkbox" name="administrateur" value="administrateur" id="flexCheckDefault">
-                  <label class="form-check-label" for="flexCheckDefault">
-                   Administrateur 
-                  </label>
+          <div class="form-check">
+          <?php 
+                   $role = test_input($_POST['roles']);
+                   $sql = $pdo->prepare( 'SELECT * FROM type_utilisateur');
+                   $sql->execute();
+                   foreach($sql as $item){ 
+                  echo '  <input class="form-check-input" type="checkbox" name="roles" value="'.$item['id_type_user'].'" id="flexCheckChecked" >
+                  <label class="form-check-label" for="flexCheckChecked">
+                  '.$item['role_user'].'
+                  </label> 
+                  </div>';
+                    
+                   }   
+                  
+              ?>
+            
+                 
+                <!--  
                 </div>
                 <div class="form-check">
                   <input class="form-check-input" type="checkbox" name="delegue" value="delegue" id="flexCheckChecked" checked>
                   <label class="form-check-label" for="flexCheckChecked">
                   Délégué 
-                  </label>
-            </div> -->
+                  </label> -->
+           </div> 
+            <!-- 
              <div class="form-check form-check-inline">
           <input class="form-check-input" type="radio" name="roles" id="inlineRadio1" value="pilote">
           <label class="form-check-label" for="inlineRadio1">Pilote</label>
@@ -97,7 +120,7 @@
         <div class="form-check form-check-inline">
           <input class="form-check-input" type="radio" name="roles" id="inlineRadio3" value="administrateur">
           <label class="form-check-label" for="inlineRadio3">Administrateur</label>
-        </div> 
+        </div> -->
        
        <div class="col-md-4 mb-3">
        <button class="btn btn-primary" type="submit" name="envoyer" style="margin-left:3cm;">Envoyer</button>
