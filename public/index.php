@@ -13,6 +13,7 @@
    $router->map('GET', '/create', '../crud/create.view');
    $router->map('GET', '/', 'home');
    $router->map('POST', '/valid', '../controllers/createControllers', 'createControllers');
+   $router->map('POST', '/connexion', '../controllers/connexionControllers', 'connexionControllers');
    $match = $router->match();
    if($match != null){
        require '../front/header.php';   

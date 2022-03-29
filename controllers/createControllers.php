@@ -10,14 +10,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     $prenom = test_input($_POST['prenom']);
     $email = test_input($_POST['email']);
     $centre = test_input($_POST['centre']);
-    $mdp = test_input($_POST['mdp']);
-    $role = test_input($_POST['role']);
+    $mdp = test_input(sha1($_POST['mdp']));
+    $role = test_input($_POST['roles']);
     $phone = test_input($_POST['phone']);
     $promotion = test_input($_POST['promotion']);
 
-    echo '</pre>';
-    print_r($_POST);
-    echo '</pre>';
     
     $pdo = Database::connect(); //on se connecte à la base
     $sql = 'INSERT INTO `utlisateur`( `nom_user`, `prenom_user`, `centre_user`, `email_user`, `telephone_user`, `password_user`)
@@ -31,4 +28,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
         'phone' => $phone ,
         'mdp' => $mdp , 
     ]);
+    $sql2 = 'INSERT INTO `type_utilisateur`(`role_user`) VALUES (:roles)';
+    $stmt2 = $pdo->prepare($sql2);
+    $stmt2->execute(['roles'=> $role]);
+
+    $sql3 = 'INSERT INTO `promotion`(`nom_promotion`) VALUES (:promotion)';
+    $stmt3 = $pdo->prepare($sql3);
+    $stmt3->execute(['promotion']);
+    $pdo = Database::disconnect();
+    echo " l'utilisateur  $nom  a été enregistré avec succes " ;
 }
+
+

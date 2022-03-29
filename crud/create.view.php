@@ -90,11 +90,11 @@
                   </label>
             </div> -->
              <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="role" id="inlineRadio1" value="pilote">
+          <input class="form-check-input" type="radio" name="roles" id="inlineRadio1" value="pilote">
           <label class="form-check-label" for="inlineRadio1">Pilote</label>
         </div>
         <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="role" id="inlineRadio2" value="etudiant">
+          <input class="form-check-input" type="radio" name="roles" id="inlineRadio2" value="etudiant">
           <label class="form-check-label" for="inlineRadio2">Etudiant</label>
         </div>
         <div class="form-check form-check-inline">
@@ -102,7 +102,7 @@
           <label class="form-check-label" for="inlineRadio3">Délégué</label>
         </div>
         <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="role" id="inlineRadio3" value="administrateur">
+          <input class="form-check-input" type="radio" name="roles" id="inlineRadio3" value="administrateur">
           <label class="form-check-label" for="inlineRadio3">Administrateur</label>
         </div> 
        
