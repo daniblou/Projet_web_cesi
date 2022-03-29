@@ -13,7 +13,7 @@ class Database {
                   if ( null == self::$cont ) {
                        try {
                             self::$cont = new PDO( "mysql:host=".self::$dbHost.";"."dbname=".self::$dbName, self::$dbUsername, self::$dbUserPassword);
-                        echo 'ok';
+                       
                   } catch(PDOException $e)
                       {
                                die( "impossible de se connecter" . $e->getMessage());

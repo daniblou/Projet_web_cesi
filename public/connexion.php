@@ -40,6 +40,9 @@
             </div>
 
             <p class="small mb-5 pb-lg-2"><a class="text-muted" href="#!">Forgot password?</a></p>
+            <p class="small mb-5 pb-lg-2"><a class="text-muted" href="<?=  $router->generate ('create');?>">Creer un compte</a></p>
+  
+            
 
           </form>
           

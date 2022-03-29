@@ -6,11 +6,15 @@
 
 if($_SERVER["REQUEST_METHOD"] == "POST")
 {
+     /* echo '<pre>';
+    print_r($_POST);
+    echo '<pre>';  */
+  
     $nom = test_input($_POST['nom']);
     $prenom = test_input($_POST['prenom']);
     $email = test_input($_POST['email']);
     $centre = test_input($_POST['centre']);
-    $mdp = test_input(sha1($_POST['mdp']));
+    $mdp = test_input(password_hash($_POST['mdp'], PASSWORD_BCRYPT));
     $role = test_input($_POST['roles']);
     $phone = test_input($_POST['phone']);
     $promotion = test_input($_POST['promotion']);
@@ -34,9 +38,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 
     $sql3 = 'INSERT INTO `promotion`(`nom_promotion`) VALUES (:promotion)';
     $stmt3 = $pdo->prepare($sql3);
-    $stmt3->execute(['promotion']);
+    $stmt3->execute(['promotion' => $promotion]);
     $pdo = Database::disconnect();
     echo " l'utilisateur  $nom  a été enregistré avec succes " ;
+   
 }
 
 

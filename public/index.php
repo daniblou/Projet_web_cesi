@@ -10,7 +10,7 @@
     // Classe altorouter pour gérer les url 
    $router = new AltoRouter();
    $router->map('GET', '/connexion', 'connexion', 'login');
-   $router->map('GET', '/create', '../crud/create.view');
+   $router->map('GET', '/create', '../crud/create.view', 'create');
    $router->map('GET', '/', 'home');
    $router->map('POST', '/valid', '../controllers/createControllers', 'createControllers');
    $router->map('POST', '/connexion', '../controllers/connexionControllers', 'connexionControllers');

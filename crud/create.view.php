@@ -1,10 +1,3 @@
-<?php
-    if($_SERVER["REQUEST_METHOD"] == "POST"){
-      echo '</pre>';
-      print_r($_POST);
-      echo '</pre>';
-    }
- ?>
 
 <html lang="en">
 <head>
@@ -58,7 +51,7 @@
             </div>
           <div class="col-md-4 mb-3">
             <label for="phone">Telephone</label>
-            <input type="tel" class="form-control" id="phone" placeholder="Tel" name= "phone"   pattern="^((\+\d{1,3}(-| )?\(?\d\)?(-| )?\d{1,5})|(\(?\d{2,6}\)?))(-| )?(\d{3,4})(-| )?(\d{4})(( x| ext)\d{1,5}){0,1}$" required>
+            <input type="phone" class="form-control" id="phone" placeholder="Tel" name= "phone"   pattern="^((\+\d{1,3}(-| )?\(?\d\)?(-| )?\d{1,5})|(\(?\d{2,6}\)?))(-| )?(\d{3,4})(-| )?(\d{4})(( x| ext)\d{1,5}){0,1}$" required>
             <div class="valid-feedback">Ok !</div>
             <div class="invalid-feedback">Valeur incorrecte</div>
         
