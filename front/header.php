@@ -14,9 +14,7 @@
     
 
 <body> 
-<div class="header">
 
-<div class="header_texture"></div>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
@@ -37,5 +35,5 @@
     </div>
   </div>
 </nav>
-</div>
+
  
