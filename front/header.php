@@ -30,7 +30,7 @@
         <a class="nav-link text-body" href="#"><i class="fa-solid fa-phone"></i> Nous contacter</a>
         <a class="nav-link text-body" href="#"><i class="fa-solid fa-book-open"></i> A propos<a>
         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-  <button class="btn btn-primary" type="button">Connexion</button>
+        <a class="btn btn-primary" href="<?=  $router->generate ('login');?>" role="button">Connexion</a>
  
         </div>
       </div>

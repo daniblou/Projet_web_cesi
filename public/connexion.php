@@ -1,39 +1,3 @@
-<?php 
-require 'functions.php';
-init_session_user();
-require '../Database/database.php'; // On inclus le fichier de connexion 
-$pdo = Database::connect(); //on se connecte à la base
-$_SESSION['connexion'];
-
-  
-  if (isset($_POST['login']) && !empty($_POST['login']) && isset($_POST['password'])  && !empty($_POST['password']) ){
-     echo '<pre>'; 
-     var_dump($_POST) ;
-      echo '<pre>'; 
-     /* $query = $pdo->prepare('SELECT email_user, password_user FROM utlisateur INNER JOIN type_utilisateur 
-      ON utlisateur.id_users = type_utilisateur.id_type_utilisateur
-       WHERE email_user=:user_login AND password_user=:user_pwd');
-      $query->execute([
-          'user_login' =>htmlentities( $_POST['login']), 
-          'user_pwd' => $_POST['password']
-      ]);
-      $confirm = $query->fetch();
-      if($confirm){
-        session_name('connexion');
-        $_SESSION['login'] = $confirm->email_user;
-        $_SESSION['password'] = $confirm->password_user;
-        $_SESSION['connexion'] = true;
-       
-
-        header('Location: home.php');
-        
-      }
-    
-      //etudiant 
-     */
-  }
-
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -57,7 +21,7 @@ $_SESSION['connexion'];
 
         <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">
 
-          <form  method="POST" action="" style="width: 23rem;">
+          <form  method="POST" action="<?=  $router->generate ('connexionControllers');?>" style="width: 23rem;">
 
             <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Log in</h3>
 
