@@ -7,7 +7,8 @@
    $router->map('GET', '/connexion', 'connexion', 'login');
    $router->map('POST', '/connexion', 'connexion', 'ok');
    $router->map('GET', '/create', '../crud/create.view', 'create');
-   $router->map('GET', '/', 'home');
+   $router->map('GET', '/', 'home','accueil');
+  // $router->map('GET', '/', 'home','accueil');
    $router->map('POST', '/', 'home', 'home');
    $router->map('POST', '/valid', '../controllers/createControllers', 'createControllers');
   // $router->map('POST', '/ok', '../controllers/connexionControllers', 'connexionControllers');
