@@ -7,7 +7,7 @@
 
 <!-- Background image -->
 <div
-    class="p-5  bg-image"
+    class="p-5 text-center bg-image"
     style="
       background-image: url('https://learnenglish.britishcouncil.org/sites/podcasts/files/RS8068_GettyImages-866440974-hig.jpg');
       height: 400px;
