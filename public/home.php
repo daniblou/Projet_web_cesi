@@ -1,7 +1,7 @@
 
 <link rel= "stylesheet" href="asset/vendors/css/connexion.css">
 
-<a href="<?=  $router->generate ('login');?>">login</a>
+
 
 
 
