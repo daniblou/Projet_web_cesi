@@ -6,30 +6,42 @@ require '../Database/database.php'; // On inclus le fichier de connexion
 $pdo = Database::connect(); //on se connecte à la base
 $_SESSION['connexion'];
 
-if($_SERVER["REQUEST_METHOD"] == "POST"){
+if(isset($_POST['send'])){
     
-    $login = $_POST['login'];
-     $passaword = $_POST['password'];
+   // $login = $_POST['login'];
+  //   $passaword = $_POST['password'];
 
-  if (isset($login) && !empty($login) && isset($passaword)  && !empty($passaword) ){
-      $query = $pdo->prepare('SELECT email_user, password_user FROM utlisateur INNER JOIN type_utilisateur 
-      ON utlisateur.id_users = type_utilisateur.id_type_utilisateur
-       WHERE email_user=:user_login AND password_user=:user_pwd');
+  if (isset($_POST['login']) && !empty($_POST['login']) && isset($_POST['password']) 
+         && !empty($_POST['password']) ){
+
+    var_dump($_POST);
+  
+    /*  $query = $pdo->prepare('SELECT E.id_type_user FROM etre E , utlisateur U , type_utilisateur T
+       WHERE E.id_type_user = T.id_type_user AND E.id_users = U.id_users AND U.email_user=:user_login AND U.password_user=:user_pwd');
       $query->execute([
-          'user_login' =>test_input( $login),
+          'user_login' =>test_input($login),
           'user_pwd' => test_input($passaword)
       ]);
       $confirm = $query->fetch();
+      var_dump($confirm);
+
+      if(password_verify($passaword, $confirm->password_user)){
+                echo 'OK';
+      }
+      else{
+          echo 'non';
+      }
       if($confirm){
         session_name('connexion');
         $_SESSION['login'] = $confirm->email_user;
         $_SESSION['password'] = $confirm->password_user;
         $_SESSION['connexion'] = true;
        
+            echo 'OK';
 
-        header('Location: home.php');
+       // header('Location: home.php');
         
-      }
+      } */
     
       //etudiant 
      

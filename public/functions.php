@@ -11,7 +11,9 @@
 
     function is_logged() : bool 
     {
+        if(isset( $_SESSION['login']))
         return true ;
+        return false;
     }
 
     function destroy_php_session()  : void
@@ -26,4 +28,9 @@
         $data = htmlspecialchars($data);
         $data = htmlentities($data);
         return $data ;
+    }
+
+    function your_rule() 
+    {
+        
     }

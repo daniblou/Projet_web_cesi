@@ -1,19 +1,16 @@
 <?php 
     // Autoloader de symfony 
     require '../vendor/autoload.php';
-   /* var_dump($_SERVER);
-    $uri = $_SERVER['REQUEST_URI'];
-   if($uri === '/connexion'){
-       require 'connexion.php';
-   }
-*/
+  
     // Classe altorouter pour gérer les url 
    $router = new AltoRouter();
    $router->map('GET', '/connexion', 'connexion', 'login');
+   $router->map('POST', '/connexion', 'connexion', 'ok');
    $router->map('GET', '/create', '../crud/create.view', 'create');
    $router->map('GET', '/', 'home');
+   $router->map('POST', '/', 'home', 'home');
    $router->map('POST', '/valid', '../controllers/createControllers', 'createControllers');
-   $router->map('POST', '/connexion', '../controllers/connexionControllers', 'connexionControllers');
+  // $router->map('POST', '/ok', '../controllers/connexionControllers', 'connexionControllers');
    $match = $router->match();
    if($match != null){
        require '../front/header.php';   

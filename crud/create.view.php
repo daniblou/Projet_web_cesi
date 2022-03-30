@@ -74,7 +74,7 @@
                    $sql = $pdo->prepare( 'SELECT * FROM promotion ');
                    $sql->execute();
                    foreach($sql as $item){
-                   echo "<option value='".$item['nom_promotion']."'>".$item['nom_promotion']."</option>";
+                   echo "<option value='".$item['id_promotion']."'>".$item['nom_promotion']."</option>";
                    }     
             ?>
           </select>
@@ -94,33 +94,7 @@
                    }   
                   
               ?>
-            
-                 
-                <!--  
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" name="delegue" value="delegue" id="flexCheckChecked" checked>
-                  <label class="form-check-label" for="flexCheckChecked">
-                  Délégué 
-                  </label> -->
            </div> 
-            <!-- 
-             <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="roles" id="inlineRadio1" value="pilote">
-          <label class="form-check-label" for="inlineRadio1">Pilote</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="roles" id="inlineRadio2" value="etudiant">
-          <label class="form-check-label" for="inlineRadio2">Etudiant</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="role" id="inlineRadio3" value="delegue">
-          <label class="form-check-label" for="inlineRadio3">Délégué</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="roles" id="inlineRadio3" value="administrateur">
-          <label class="form-check-label" for="inlineRadio3">Administrateur</label>
-        </div> -->
        
        <div class="col-md-4 mb-3">
        <button class="btn btn-primary" type="submit" name="envoyer" style="margin-left:3cm;">Envoyer</button>

@@ -14,13 +14,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     $prenom = test_input($_POST['prenom']);
     $email = test_input($_POST['email']);
     $centre = test_input($_POST['centre']);
-    $mdp = test_input(password_hash($_POST['mdp'], PASSWORD_BCRYPT));
+    $mdp = test_input(sha1($_POST['mdp']));
     $role = test_input($_POST['roles']);
     $phone = test_input($_POST['phone']);
     $promotion = test_input($_POST['promotion']);
    
-/*
-    
     $pdo = Database::connect(); //on se connecte à la base
     $sql = 'INSERT INTO `utlisateur`( `nom_user`, `prenom_user`, `centre_user`, `email_user`, `telephone_user`, `password_user`)
     VALUES  ( :nom, :prenom, :centre, :email, :phone, :mdp )';
@@ -54,7 +52,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     }
 
     echo '<div class="alert alert-success"> <h3> Le compte a été creer avec succes </h3> </div>';
-  */
+  
 }
 
 
