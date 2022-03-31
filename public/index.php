@@ -8,21 +8,21 @@
    $router->map('POST', '/connexion', 'connexion', 'ok');
    $router->map('GET', '/create', '../crud/create.view', 'create');
    $router->map('GET', '/', 'home','accueil');
-  // $router->map('GET', '/', 'home','accueil');
    $router->map('POST', '/', 'home', 'home');
    $router->map('POST', '/valid', '../controllers/createControllers', 'createControllers');
   // $router->map('POST', '/ok', '../controllers/connexionControllers', 'connexionControllers');
    $match = $router->match();
    if($match != null){
-       require '../front/header.php';   
+      // require '../front/header.php';   
        if( is_callable($match['target'])){
            call_user_func_array( $match['target'], $match['params']);
        }else{
            $params = $match['params'];
            require "{$match['target']}.php";
        }
-       require '../front/footer.php';   
-   }else{
+    //  require '../front/foot.php';   
+   }
+   else{
        require ''; 
    }
 

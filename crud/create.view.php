@@ -2,15 +2,9 @@
     require '../Database/database.php';
     require '../public/functions.php';
     $pdo = Database::connect();
+    require '../front/header.php';   
 ?>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+
 
 
     <h1>Formulaire d'inscription</h1>
@@ -104,5 +98,4 @@
 
         <script src="../asset/vendors/js/bootstrap.min.js"></script>  
         <script src="../asset/vendors/js/form_create.js"></script>
-</body>
-</html>
+        <?php   require '../front/foot.php';  ?>

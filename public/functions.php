@@ -30,7 +30,27 @@
         return $data ;
     }
 
-    function your_rule() 
+    function your_rule($data) 
     {
-        
+        define('ADMIN', 13);
+        define('PILOTE', 14);
+        define('DELEGUE', 15);
+        define('ETUDIANT', 16);
+        switch ($data) {
+            case ADMIN:
+                header("location: /");
+                break;
+            case PILOTE:
+                header("location: pilote");
+                break;
+            case DELEGUE:
+                 header("location: delegue");
+                 break;
+            case ETUDIANT:
+                 header("location: etudiant");
+                break;
+            default:
+               echo "erreur d'identifiants";
+                break;
+        }
     }

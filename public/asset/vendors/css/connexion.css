@@ -1,4 +1,18 @@
-.bg-image-vertical {
+
+.en_bas{
+  background:#ccc;
+
+  position:absolute;
+  
+  margin-bottom: 0%;
+  
+  width:100%;
+  
+  padding-top:50px;
+  
+  height:50px;
+}
+/*.bg-image-vertical {
     position: relative;
     overflow: hidden;
     background-repeat: no-repeat;
@@ -12,7 +26,7 @@
     }
   }
 /* nav bar Nandy header*/
-  .float {
+ /* .float {
     float: right;
     
     
@@ -49,4 +63,4 @@
    background-size: cover;
 
 
- }
+ }*/

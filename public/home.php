@@ -1,7 +1,11 @@
 
 <link rel= "stylesheet" href="asset/vendors/css/connexion.css">
 
+<<<<<<< HEAD
+<?= require '../front/header.php'; ?>
+=======
 
+>>>>>>> 7401d853b9dc645ea781a809b1ea0894de642ac9
 
 
 
@@ -148,5 +152,5 @@
       </div>
     </main>
     <!--Main layout-->
-
+    <?php   require '../front/foot.php';  ?>
 
