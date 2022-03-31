@@ -45,17 +45,17 @@
             </div>
 
             <div class="col-md-6 gx-5 mb-4">
-              <h4><strong>Facilis consequatur eligendi</strong></h4>
+              <h4><strong>Le site qui vous facilitera la vie </strong></h4>
               <p class="text-muted">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis consequatur
-                eligendi quisquam doloremque vero ex debitis veritatis placeat unde animi laborum
-                sapiente illo possimus, commodi dignissimos obcaecati illum maiores corporis.
+              Aujourd'hui, les étudiants effectuent leurs recherches de stage en entreprise en activant leurs réseaux personnels et professionnels (linkedIn, anciennes promotions, etc.), en postulant à des offres.
+              
               </p>
-              <p><strong>Doloremque vero ex debitis veritatis?</strong></p>
+              <p><strong>Comment cela fonctionne?</strong></p>
               <p class="text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod itaque voluptate
-                nesciunt laborum incidunt. Officia, quam consectetur. Earum eligendi aliquam illum
-                alias, unde optio accusantium soluta, iusto molestiae adipisci et?
+              Afin de rendre cette étape de recherche de stage plus facile et pratique,
+              il serait nécessaire de disposer d'un site web qui regroupe différentes offres de stage,
+              et qui permettra de stocker les données des entreprises ayant déjà pris un stagiaire, 
+              ou qui en recherchent un.
               </p>
             </div>
           </div>
