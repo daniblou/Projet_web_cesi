@@ -1,0 +1,243 @@
+/* Generale*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+li{
+
+    list-style: none;
+
+}
+
+/* header */
+
+.nav-bar{
+    position: fixed;
+    top:0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 115px;
+    background: #039ee3;
+    font-family: sans-serif;
+    font-weight: bold;
+    overflow: hidden;
+    box-shadow: 0px 5px 10px rgb(65, 66, 66);
+    z-index: 3;
+    margin-bottom:3px;
+}
+.nav-bar ul{
+
+    float: right;
+
+}
+.nav-bar li{
+
+    float: left;
+    padding: 0 10px 0;
+    margin-top: 40px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-bar img{
+    float: left;
+    margin: 13px;
+}
+
+
+.nav-bar a.active{
+
+    padding: 5px 0;
+    border-bottom:4px solid white;
+
+}
+
+.img{
+
+    position: relative;
+    
+    margin: 115px 0;
+    height: 550px;
+    z-index: 1;
+    background-image: url(../images/computer.jpg);
+    text-align: center;
+    background-size:cover ;
+    margin-bottom: 25px;
+
+}
+
+.img .titre{
+    position: absolute;
+    margin: 20% 0;
+    background: #039ee3;
+    padding: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color:#fff;
+    text-align: center;
+    margin: 18% 19%;
+}
+
+/*Nos services*/
+.service{
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background: linear-gradient(5.5turn,rgb(0, 225, 255),rgb(213, 222, 228));
+    padding: 50px;
+    margin: 20px auto;
+
+}
+.service .content{
+    
+
+    width: 90%;
+    margin: 0 auto;
+    
+}
+.content div{
+    margin: 40px 30px 15px;
+    float: left;
+    text-align: justify;
+}
+.section p{
+    width: 300px;
+}
+    .ssd{
+        text-align: center;
+        background: url(../images/ssd.png) center;
+        height: 80px;
+        width: 80px;
+        background-size: cover;
+    }
+    .tracking{
+
+        background: url(../images/tracking.png) center;
+        height: 80px;
+        width: 80px;
+        background-size: cover
+
+    }
+    .telecom{
+
+        background: url(../images/telecom.png) center;
+        height: 80px;
+        width: 80px;
+        background-size: cover;
+        
+    }
+    .maintenance{
+
+        background: url(../images/maintenance.png)center ;
+        height: 80px;
+        width: 80px;
+        background-size: cover;
+        
+    }
+    .support{
+
+        background: url(../images/support.png) center;
+        height: 80px;
+        width: 80px;
+        background-size: cover;
+    }
+    .service h2{
+        width: 20%;
+        text-transform: uppercase;
+        padding: 5px 1px;
+        border-bottom: 4px solid white;
+        text-align: center;
+        margin: 0 auto;
+        opacity: 0.75;
+        margin-bottom: 70px;
+        font-size: 35px;
+    }
+    .content p{
+        margin: 150px 0 30px;
+        text-align: justify;
+        width: 300px;
+    }
+
+    .section .telecom ,.section .support ,.section .ssd ,.section .maintenance ,.section .tracking {
+        margin: 0 110px;
+    }
+
+    #bas{
+
+        width: 80%;
+        margin: 0 auto;
+        
+
+}
+    
+/*
+.content h2{
+    color: rgb(13, 14, 14);
+    margin: 0 auto;
+    opacity: 0.75;
+    margin-bottom: 70px;
+}
+
+
+    /*
+    #steps
+{
+    margin: 80px 0;
+}
+#steps ul li
+{
+    width: 200px;
+    float: left;
+    padding-top: 200px;
+    text-align: center;
+    margin-right: 10px;
+}
+#steps h4
+{
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+#step p
+{
+    margin-bottom:20px ;
+}
+#step1
+{
+    background: url(../images/ssd.png)  top center;
+    padding: 10px;
+    height: 80px;
+        width: 80px;
+    background-size: cover;
+    
+}
+#step2
+{
+    background: url(../images/tracking.png) top center;
+    background-size: cover;
+    height: 80px;
+        width: 80px;
+}
+#step3
+{
+    background: url(../images/telecom.png)  top center;
+    background-size: cover;
+    height: 10px;
+        width: 40px;
+}
+#step4
+{
+    background: url(../images/maintenance.png)  top center;
+    background-size: cover;
+    height: 80px;
+        width: 80px;
+}

@@ -1,7 +1,7 @@
 
 <link rel= "stylesheet" href="asset/vendors/css/connexion.css">
 
-<a href="<?=  $router->generate ('login');?>">login</a>
+<?= require '../front/header.php'; ?>
 
 
 
@@ -148,5 +148,5 @@
       </div>
     </main>
     <!--Main layout-->
-
+    <?php   require '../front/foot.php';  ?>
 
