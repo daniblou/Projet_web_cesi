@@ -21,10 +21,10 @@
     <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
       <div class="d-flex justify-content-center align-items-center h-100">
         <div class="text-white">
-          <h1 class="mb-3">Heading</h1>
-          <h4 class="mb-3">Subheading</h4>
+          <h1 class="mb-3">Trouvez un stage</h1>
+          <h4 class="mb-3">Maintenant</h4>
           <a class="btn btn-outline-light btn-lg" href="#!" role="button"
-          >Call to action</a
+          >Commencer</a
           >
         </div>
       </div>
@@ -52,6 +52,7 @@
               <h4><strong>Le site qui vous facilitera la vie </strong></h4>
               <p class="text-muted">
               Aujourd'hui, les étudiants effectuent leurs recherches de stage en entreprise en activant leurs réseaux personnels et professionnels (linkedIn, anciennes promotions, etc.), en postulant à des offres.
+              Pour ce faire ce site web rendra les choses simples car il regroupe tout en 1.
               
               </p>
               <p><strong>Comment cela fonctionne?</strong></p>
@@ -85,12 +86,11 @@
                   </a>
                 </div>
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
+                  <h5 class="card-title">Un stage</h5>
                   <p class="card-text">
-                    Some quick example text to build on the card title and make up the bulk of the
-                    card's content.
+                    Vous cherchez un stage?! C'est par ici.
                   </p>
-                  <a href="#!" class="btn btn-primary">Button</a>
+                  <a href="#!" class="btn btn-primary">Commencer</a>
                 </div>
               </div>
             </div>
@@ -107,12 +107,11 @@
                   </a>
                 </div>
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
+                  <h5 class="card-title">Une entreprise</h5>
                   <p class="card-text">
-                    Some quick example text to build on the card title and make up the bulk of the
-                    card's content.
+                    Ici vous trouverez l'entreprise qui correspond a vos besoins.
                   </p>
-                  <a href="#!" class="btn btn-primary">Button</a>
+                  <a href="#!" class="btn btn-primary">Commencer</a>
                 </div>
               </div>
             </div>
@@ -129,12 +128,12 @@
                   </a>
                 </div>
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
+                  <h5 class="card-title">Card title<s/h5>
                   <p class="card-text">
                     Some quick example text to build on the card title and make up the bulk of the
                     card's content.
                   </p>
-                  <a href="#!" class="btn btn-primary">Button</a>
+                  <a href="#!" class="btn btn-primary">commencer</a>
                 </div>
               </div>
             </div>
