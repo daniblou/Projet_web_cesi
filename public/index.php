@@ -9,10 +9,13 @@
    $router->map('GET', '/create', '../crud/create.view', 'create');
    $router->map('GET', '/', 'home','accueil');
    $router->map('POST', '/', 'home', 'home');
+   $router->map('GET', '/read', '../crud/read', 'read');
+   $router->map('GET', '/update/[i:id]', '../crud/update', 'update');
    $router->map('POST', '/valid', '../controllers/createControllers', 'createControllers');
   // $router->map('POST', '/ok', '../controllers/connexionControllers', 'connexionControllers');
+
    $match = $router->match();
-   if($match != null){
+   if(is_array($match)){
       // require '../front/header.php';   
        if( is_callable($match['target'])){
            call_user_func_array( $match['target'], $match['params']);
@@ -23,7 +26,7 @@
     //  require '../front/foot.php';   
    }
    else{
-       require ''; 
+       require 'error/404.php'; 
    }
 
 ?>

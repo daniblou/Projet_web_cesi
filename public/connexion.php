@@ -16,32 +16,34 @@
                'user_pwd' => test_input(sha1($passaword))
            ]);
            $confirm = $query->fetch();
-
-           if($confirm){
+          
+                      if($confirm){
                 init_session_user();
                 $_SESSION['login'] = $login;
                 $_SESSION['password'] = $confirm->password_user;
                 $_SESSION['role'] = $confirm ;
                 $_SESSION['connexion'] == true ;
                
-              //  print_r($confirm[0]);
               your_rule($confirm[0]);
-        
+                       
             }
                else{
-              echo 'non';
+                $erreur = 'Identifiant ou mot de passe incorrect'; 
           }
     }
   }
+
   require '../front/header.php';   
 ?>
         <link rel="stylesheet" href="asset/vendors/css/sweetalert2.min.css">       
         <link rel="stylesheet" href="asset/vendors/css/connexion_copy.css">       
         <link rel="stylesheet" href="asset/vendors/css/demo.css">       
         <link rel="stylesheet" href="asset/vendors/css/material-design-iconic-font.min.css">       
-
-<div class="container-login">
         
+<div class="container-login">
+<?php if(is_logged()) : ?>
+   <div>Bienvenue Monsieur <?= $_SESSION['login']  ?> vous êtes connecté</div>
+            <?php else: ?>
         <div class="wrap-login">
         
             <form class="login-form validate-form" id="formLogin" action="<?=  $router->generate ('ok');?>" method="POST">
@@ -61,10 +63,14 @@
                     <div class="wrap-login-form-btn">
                         <div class="login-form-bgbtn"></div>
                         <button type="submit" name="send" class="login-form-btn">Se connecter</button>
+                        <?php  if(!empty($erreur)): ?>
+                            <div class="alert alert-danger "><?= $erreur?> </div>
+                            <?php endif ; ?>
                     </div>
                 </div>
             </form>
         </div>
+        <?php endif ; ?>
     </div>     
 
   <?php    ?>

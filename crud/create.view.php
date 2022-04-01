@@ -45,6 +45,12 @@
                   <option value="la_rochelle">La Rochelle</option>
                   <option value="angouleme">Angouleme</option>
                   <option value="nanterre">Nanterre</option>
+                  <option value="Saint Nazaire">Saint Nazaire</option>
+                  <option value="Lyon">Lyon</option>
+                  <option value="Nice">Nice</option>
+                  <option value="Toulouse">Toulouse</option>
+                  <option value="Reims">Reims</option>
+                  <option value="Nante">Nante</option>
              </select>
             </div>
           <div class="col-md-4 mb-3">

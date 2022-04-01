@@ -1,11 +1,7 @@
 
 <link rel= "stylesheet" href="asset/vendors/css/connexion.css">
 
-<<<<<<< HEAD
 <?= require '../front/header.php'; ?>
-=======
-
->>>>>>> 7401d853b9dc645ea781a809b1ea0894de642ac9
 
 
 
@@ -21,10 +17,10 @@
     <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
       <div class="d-flex justify-content-center align-items-center h-100">
         <div class="text-white">
-          <h1 class="mb-3">Heading</h1>
-          <h4 class="mb-3">Subheading</h4>
-          <a class="btn btn-outline-light btn-lg" href="#!" role="button"
-          >Call to action</a
+          <h1 class="mb-3">BIENVEBUE</h1>
+          <h4 class="mb-3">CESI STAGE</h4>
+          <a class="btn btn-outline-light btn-lg" href="<?=  $router->generate('login');?>" role="button"
+          >Connexion</a
           >
         </div>
       </div>

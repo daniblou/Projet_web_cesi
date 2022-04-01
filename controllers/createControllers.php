@@ -1,4 +1,7 @@
 <?php
+    session_start();
+    $_SESSION['succes'] = false ; 
+    require '../front/header.php';
     require '../public/functions.php' ;
     require '../Database/database.php';
 
@@ -6,10 +9,7 @@
 
 if($_SERVER["REQUEST_METHOD"] == "POST")
 {
-    echo '<pre>';
-    print_r($_POST);
-    echo '</pre>';
-    
+   
     $nom = test_input($_POST['nom']);
     $prenom = test_input($_POST['prenom']);
     $email = test_input($_POST['email']);
@@ -31,6 +31,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
         'phone' => $phone ,
         'mdp' => $mdp , 
     ]);
+    $_SESSION['succes'] = true ;
     $lastId = $pdo->lastInsertId();
     if(!empty($role)){
        
@@ -52,7 +53,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     }
 
     echo '<div class="alert alert-success"> <h3> Le compte a été creer avec succes </h3> </div>';
-  
+    echo '<a class="btn btn-success" href="'.  $router->generate ('read') .'">OK</a>';
 }
+
+require '../front/foot.php';
 
 
