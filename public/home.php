@@ -45,17 +45,18 @@
             </div>
 
             <div class="col-md-6 gx-5 mb-4">
-              <h4><strong>Facilis consequatur eligendi</strong></h4>
+              <h4><strong>Le site qui vous facilitera la vie </strong></h4>
               <p class="text-muted">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis consequatur
-                eligendi quisquam doloremque vero ex debitis veritatis placeat unde animi laborum
-                sapiente illo possimus, commodi dignissimos obcaecati illum maiores corporis.
+              Aujourd'hui, les étudiants effectuent leurs recherches de stage en entreprise en activant leurs réseaux personnels et professionnels (linkedIn, anciennes promotions, etc.), en postulant à des offres.
+              Pour ce faire ce site web rendra les choses simples car il regroupe tout en 1.
+              
               </p>
-              <p><strong>Doloremque vero ex debitis veritatis?</strong></p>
+              <p><strong>Comment cela fonctionne?</strong></p>
               <p class="text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod itaque voluptate
-                nesciunt laborum incidunt. Officia, quam consectetur. Earum eligendi aliquam illum
-                alias, unde optio accusantium soluta, iusto molestiae adipisci et?
+              Afin de rendre cette étape de recherche de stage plus facile et pratique,
+              il serait nécessaire de disposer d'un site web qui regroupe différentes offres de stage,
+              et qui permettra de stocker les données des entreprises ayant déjà pris un stagiaire, 
+              ou qui en recherchent un.
               </p>
             </div>
           </div>
@@ -81,12 +82,11 @@
                   </a>
                 </div>
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
+                  <h5 class="card-title">Un stage</h5>
                   <p class="card-text">
-                    Some quick example text to build on the card title and make up the bulk of the
-                    card's content.
+                    Vous cherchez un stage?! C'est par ici.
                   </p>
-                  <a href="#!" class="btn btn-primary">Button</a>
+                  <a href="#!" class="btn btn-primary">Commencer</a>
                 </div>
               </div>
             </div>
@@ -103,12 +103,11 @@
                   </a>
                 </div>
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
+                  <h5 class="card-title">Une entreprise</h5>
                   <p class="card-text">
-                    Some quick example text to build on the card title and make up the bulk of the
-                    card's content.
+                    Ici vous trouverez l'entreprise qui correspond a vos besoins.
                   </p>
-                  <a href="#!" class="btn btn-primary">Button</a>
+                  <a href="#!" class="btn btn-primary">Commencer</a>
                 </div>
               </div>
             </div>
@@ -125,12 +124,12 @@
                   </a>
                 </div>
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
+                  <h5 class="card-title">Card title<s/h5>
                   <p class="card-text">
                     Some quick example text to build on the card title and make up the bulk of the
                     card's content.
                   </p>
-                  <a href="#!" class="btn btn-primary">Button</a>
+                  <a href="#!" class="btn btn-primary">commencer</a>
                 </div>
               </div>
             </div>
