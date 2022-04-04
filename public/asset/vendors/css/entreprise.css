@@ -1,0 +1,35 @@
+.rating {
+    direction: rtl;
+ }
+ .rating a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 3em;
+    transition: color .4s;
+ }
+ .rating a:hover,
+ .rating a:focus,
+ .rating a:hover ~ a,
+ .rating a:focus ~ a {
+    color: orange;
+    cursor: pointer;
+ }
+
+ @media(max-width:900px) {
+    main{
+       width: 100%;
+       height: 100%;
+    }
+    form{
+      width: 100%;
+      height: 100%;
+   }
+    
+ }
+ body{
+    background-image: url(entreprise );
+    height: 500px; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */  
+ }

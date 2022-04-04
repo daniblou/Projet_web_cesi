@@ -38,16 +38,16 @@
         define('ETUDIANT', 16);
         switch ($data) {
             case ADMIN:
-                header("location: /read");
+                header("location: /gestion");
                 break;
             case PILOTE:
-                header("location: pilote");
+                header("location: gestion");
                 break;
             case DELEGUE:
-                 header("location: delegue");
+                 header("location: gestion");
                  break;
             case ETUDIANT:
-                 header("location: /read");
+                 header("location: /gestion");
                 break;
             default:
                echo "erreur d'identifiants";

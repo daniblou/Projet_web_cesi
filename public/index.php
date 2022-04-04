@@ -9,7 +9,12 @@
    $router->map('GET', '/create', '../crud/create.view', 'create');
    $router->map('GET', '/', 'home','accueil');
    $router->map('POST', '/', 'home', 'home');
+   $router->map('GET', '/gestion', 'gestion', 'gestion');
+   $router->map('GET', '/entrprise', 'Entreprise', 'entreprise');
+   $router->map('GET', '/entreprise_crud', '../crud/entreprise_crud', 'entreprise_crud');
    $router->map('GET', '/read', '../crud/read', 'read');
+   $router->map('GET', '/apropos', 'Apropos', 'apropos');
+   $router->map('GET', '/contact', 'contact', 'contact');
    $router->map('GET', '/update/[i:id]', '../crud/update', 'update');
    $router->map('POST', '/valid', '../controllers/createControllers', 'createControllers');
   // $router->map('POST', '/ok', '../controllers/connexionControllers', 'connexionControllers');

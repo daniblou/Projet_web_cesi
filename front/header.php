@@ -29,9 +29,9 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav ms-auto md-flex">
-        <a class="nav-link text-body " aria-current="page" href="#"><i class="fa-solid fa-magnifying-glass"></i> Commencer une recherche</a>
-        <a class="nav-link text-body" href="#"><i class="fa-solid fa-phone"></i> Nous contacter</a>
-        <a class="nav-link text-body" href="#"><i class="fa-solid fa-book-open"></i> A propos<a>
+        <a class="nav-link text-body " aria-current="page" href="<?= $router->generate ('accueil');?>"><i class="fas fa-home"></i></i>Accueil</a>
+        <a class="nav-link text-body" href="<?= $router->generate ('contact');?>"><i class="fa-solid fa-phone"></i> Nous contacter</a>
+        <a class="nav-link text-body" href="<?= $router->generate ('apropos');?>"><i class="fa-solid fa-book-open"></i> A propos<a>
         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
           <?php  if(isset($etat)) : ?>
         <a class="btn btn-primary" href="<?=  $router->generate('accueil');?>" role="button">Deconnexion</a>

@@ -1,17 +1,12 @@
-<?php  
-          require '../front/header.php'; 
+<?php  require '../front/header.php'  ;
+  
           require '../public/functions.php';
             session_start();
-            
-            if(!isset($_SESSION['login'])){
-                header('location: /connexion');
-                exit();
-            }
+        
           require '../Database/database.php';//on inclut notre fichier de connection 
           $pdo = Database::connect(); //on se connecte à la base
-          $sql = 'SELECT `nom_user`,`nom_user`, `prenom_user`, `centre_user`, `email_user`, `telephone_user`, `nom_promotion`,`password_user`, `role_user`
-          FROM utlisateur U, type_utilisateur T, etre E, promotion P, appartenir_ A
-           WHERE E.id_type_user= T.id_type_user AND E.id_users= U.id_users AND A.id_promotion= P.id_promotion AND A.id_users=U.id_users'; //on formule notre requete 
+          $sql = 'SELECT  `nom_entreprise`, `secteur_act_entreprise`, `nbre_stagiaire_accepte`, `evaluation_stagiare`, `confiance_pilote`
+           FROM `entreprise` '; //on formule notre requete 
           $cook = $pdo->query($sql, PDO::FETCH_ASSOC);
          $req = $cook->fetchAll(); 
         
@@ -19,22 +14,22 @@
 
 <div class="container">
 <div class="row">
-<h2>Gestion des utilisateurs</h2>
+<h2>Gestion des entreprises</h2>
 
 </div>
 <div class="row">           
-     <a href="<?=  $router->generate ('create');?>" class="btn btn-primary">Ajouter un utilisateur </a>
+     <a href="<?=  $router->generate ('entreprise   ');?>" class="btn btn-primary">Ajouter une entreprise </a>
 <div class="table-responsive">
 <table class="table table-hover table-bordered">
     <thead>
-<th>Nom </th>
-<th>Prenom</th>
-<th>Email</th>
-<th>Centre</th>
-<th>Téléphone</th>
-<th>Promotion</th>
-<th>Mot de passe</th>
-<th>rôle</th>
+<th>Nom de l'entreprise </th>
+<th>Secteur d'activité</th>
+<th>Ville</th>
+<th>Rue</th>
+<th>Code Postal</th>
+<th>Nombre de stagiares acceptés</th>
+<th>Description</th>
+<th>Confiance du pilote</th>
 
 </thead>
 
@@ -46,11 +41,11 @@
           //on cree les lignes du tableau avec chaque valeur retournée
                             $tab = $row['id_users'];
                             echo '<tr>';
-                            echo'<td>' . $row['nom_user'] . '</td>';
-                            echo'<td>' . $row['prenom_user'] . '</td>';
-                            echo'<td>' . $row['email_user'] . '</td>';
-                            echo'<td>' . $row['centre_user'] . '</td>';
-                            echo'<td>' . $row['telephone_user'] . '</td>';
+                            echo'<td>' . $row['nom_entreprise'] . '</td>';
+                            echo'<td>' . $row['secteur_act_entreprise'] . '</td>';
+                            echo'<td>' . $row['nbre_stagiaire_accepte'] . '</td>';
+                            echo'<td>' . $row['evaluation_stagiare'] . '</td>';
+                            echo'<td>' . $row['confiance_pilote'] . '</td>';
                             echo'<td>' . $row['nom_promotion'] . '</td>';
                             echo'<td>' . $row['password_user'] . '</td>';
                             echo'<td>' . $row['role_user'] . '</td>';
@@ -73,5 +68,5 @@
 </div>
 </div>
 </div>
-        <a href="<?=  $router->generate('gestion')?>" class="btn btn-success">Retour</a>
+            
 <?php  require '../front/foot.php';  ?>

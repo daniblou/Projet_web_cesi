@@ -67,7 +67,7 @@
 
         <!--Section: Content-->
         <section class="text-center">
-          <h4 class="mb-5"><strong>Facilis consequatur eligendi</strong></h4>
+          <h4 class="mb-5"><strong>Nos services</strong></h4>
 
           <div class="row">
             <div class="col-lg-4 col-md-12 mb-4">
@@ -86,7 +86,7 @@
                   <p class="card-text">
                     Vous cherchez un stage?! C'est par ici.
                   </p>
-                  <a href="#!" class="btn btn-primary">Commencer</a>
+                  <a href="<?=  $router->generate('login');?>" class="btn btn-primary">Commencer</a>
                 </div>
               </div>
             </div>
@@ -98,7 +98,7 @@
                     src="image/ce.jpg"
                     class="img-fluid"
                   />
-                  <a href="#!">
+                  <a href="<?=  $router->generate('login');?>">
                     <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
                   </a>
                 </div>
@@ -107,7 +107,7 @@
                   <p class="card-text">
                     Ici vous trouverez l'entreprise qui correspond a vos besoins.
                   </p>
-                  <a href="#!" class="btn btn-primary">Commencer</a>
+                  <a href="<?=  $router->generate('login');?>" class="btn btn-primary">Commencer</a>
                 </div>
               </div>
             </div>
@@ -119,17 +119,16 @@
                     src="image/pp.png"
                     class="img-fluid"
                   />
-                  <a href="#!">
+                  <a href="<?=  $router->generate('login');?>">
                     <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
                   </a>
                 </div>
                 <div class="card-body">
-                  <h5 class="card-title">Card title<s/h5>
+                  <h5 class="card-title">Etudiant<s/h5>
                   <p class="card-text">
-                    Some quick example text to build on the card title and make up the bulk of the
-                    card's content.
+                    Etes-vous etudiant ?
                   </p>
-                  <a href="#!" class="btn btn-primary">commencer</a>
+                  <a href="<?=  $router->generate('login');?>" class="btn btn-primary">Commencer</a>
                 </div>
               </div>
             </div>
